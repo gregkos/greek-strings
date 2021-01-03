@@ -9,9 +9,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "gregkos",
+            "name": "GregKos",
             "email": "gregkos.dev@gmail.com",
-            "homepage": "https://spatie.be",
+            "homepage": "https://gregkos.github.io",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Gregkos\\GreekStrings\\": "src"
+            "GregKos\\GreekStrings\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Gregkos\\GreekStrings\\Tests\\": "tests"
+            "GregKos\\GreekStrings\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,15 +43,5 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "funding": [
-        {
-            "type": "github",
-            "url": "https://github.com/sponsors/spatie"
-        },
-        {
-            "type": "other",
-            "url": "https://spatie.be/open-source/support-us"
-        }
-    ]
+    "prefer-stable": true
 }

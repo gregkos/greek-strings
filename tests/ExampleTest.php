@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregkos\GreekStrings\Tests;
+namespace GregKos\GreekStrings\Tests;
 
 use PHPUnit\Framework\TestCase;
 

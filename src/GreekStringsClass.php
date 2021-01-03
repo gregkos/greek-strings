@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregkos\GreekStrings;
+namespace GregKos\GreekStrings;
 
 class GreekStringsClass
 {
