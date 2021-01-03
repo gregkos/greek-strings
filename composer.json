@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "gregkos/greek-strings",
+    "description": "A manipulation library for Greek strings",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "gregkos",
+        "greek-strings"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/gregkos/greek-strings",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "gregkos",
+            "email": "gregkos.dev@gmail.com",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Gregkos\\GreekStrings\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Gregkos\\GreekStrings\\Tests\\": "tests"
         }
     },
     "scripts": {
