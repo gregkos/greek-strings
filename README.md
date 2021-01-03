@@ -1,7 +1,7 @@
 # A manipulation library for Greek strings
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gregkos/greek-strings.svg?style=flat-square)](https://packagist.org/packages/gregkos/greek-strings)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/gregkos/greek-strings/run-tests?label=tests)](https://github.com/gregkos/greek-strings/actions?query=workflow%3Atests+branch%3Amaster)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/gregkos/greek-strings/run-tests?label=tests)](https://github.com/gregkos/greek-strings/actions?query=workflow%3ATests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/gregkos/greek-strings.svg?style=flat-square)](https://packagist.org/packages/gregkos/greek-strings)
 
 
