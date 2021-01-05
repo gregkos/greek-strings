@@ -7,8 +7,10 @@ use PHPUnit\Framework\TestCase;
 class ExampleTest extends TestCase
 {
     /** @test */
-    public function true_is_true()
+    public function transliterate_a_greeting()
     {
-        $this->assertTrue(true);
+        $transliterated = 'kalimera';
+
+        $this->assertEquals('kalimera', $transliterated);
     }
 }
