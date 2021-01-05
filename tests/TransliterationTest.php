@@ -2,14 +2,15 @@
 
 namespace GregKos\GreekStrings\Tests;
 
+use GregKos\GreekStrings\GreekString;
 use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase
+class TransliterationTest extends TestCase
 {
     /** @test */
     public function transliterate_a_greeting()
     {
-        $transliterated = 'kalimera';
+        $transliterated = (new GreekString('καλημέρα'))->transliterate();
 
         $this->assertEquals('kalimera', $transliterated);
     }
