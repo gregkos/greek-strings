@@ -5,22 +5,22 @@ namespace GregKos\GreekStrings;
 
 class Transliterator
 {
-    //difthongs
-    protected static array $el_difthongs = [
+    // digraphs
+    protected static array $el_digraphs = [
         'αι|αί', 'οι|οί', 'ου|ού', 'ει|εί', 'ντ', 'τσ', 'τζ', 'γγ', 'γκ', 'γχ', 'γξ', 'θ', 'χ', 'ψ',
         'ΑΙ|ΑΊ', 'ΟΙ|ΟΊ', 'ΟΥ|ΟΎ', 'ΕΙ|ΕΊ', 'ΝΤ', 'ΤΣ', 'ΤΖ', 'ΓΓ', 'ΓΚ', 'ΓΧ', 'ΓΞ', 'Θ', 'Χ', 'Ψ',
         'Αι|Αί', 'Οι|Οί', 'Ου|Ού', 'Ει|Εί', 'Ντ', 'Τσ', 'Τζ', 'Γγ', 'Γκ', 'Γχ', 'Γξ',
         'αΙ|αΊ', 'οΙ|οΊ', 'οΥ|οΎ', 'εΙ|εΊ', 'νΤ', 'τΣ', 'τΖ', 'γΓ', 'γΚ', 'γΧ', 'γΞ',
     ];
-    protected static array $lat_difthongs = [
+    protected static array $lat_digraphs = [
         'ai', 'oi', 'ou', 'ei', 'nt', 'ts', 'tz', 'ng', 'gk', 'nch', 'nx', 'th', 'ch', 'ps',
         'AI', 'OI', 'OU', 'EI', 'NT', 'TS', 'TZ', 'NG', 'GK', 'NCH', 'NX', 'TH', 'CH', 'PS',
         'Ai', 'Oi', 'Ou', 'Ei', 'Nt', 'Ts', 'Tz', 'Ng', 'Gk', 'Nch', 'Nx',
         'aI', 'oI', 'oU', 'eI', 'nT', 'tS', 'tZ', 'nG', 'gK', 'nCH', 'nX',
     ];
 
-    //*υ difthongs case, if followed by letters at pos 1-3 converted to *f, else to *v
-    protected static array $el_spec_difthongs = [
+    // *υ digraphs case, if followed by letters at pos 1-3 converted to *f, else to *v
+    protected static array $el_spec_digraphs = [
         '(α[υ|ύ])(?![α|ά|β|γ|δ|ε|έ|ζ|η|ή|λ|ι|ί|ϊ|ΐ|μ|ν|ο|ό|ρ|ω|ώ|Α|Ά|Β|Γ|Δ|Ε|Έ|Ζ|Η|Ή|Λ|Ι|Ί|Ϊ|Μ|Ν|Ο|Ό|Ρ|Ω|Ώ|])',
         '(ε[υ|ύ])(?![α|ά|β|γ|δ|ε|έ|ζ|η|ή|λ|ι|ί|ϊ|ΐ|μ|ν|ο|ό|ρ|ω|ώ|Α|Ά|Β|Γ|Δ|Ε|Έ|Ζ|Η|Ή|Λ|Ι|Ί|Ϊ|Μ|Ν|Ο|Ό|Ρ|Ω|Ώ|])',
         '(η[υ|ύ])(?![α|ά|β|γ|δ|ε|έ|ζ|η|ή|λ|ι|ί|ϊ|ΐ|μ|ν|ο|ό|ρ|ω|ώ|Α|Ά|Β|Γ|Δ|Ε|Έ|Ζ|Η|Ή|Λ|Ι|Ί|Ϊ|Μ|Ν|Ο|Ό|Ρ|Ω|Ώ|])',
@@ -46,24 +46,24 @@ class Transliterator
         '(ε[Υ|Ύ])',
         '(η[Υ|Ύ])',
     ];
-    protected static array $lat_spec_difthongs = [
+    protected static array $lat_spec_digraphs = [
         'af', 'ef', 'if', 'av', 'ev', 'iv',
         'AF', 'EF', 'IF', 'AV', 'EV', 'IV',
         'Af', 'Ef', 'If', 'Av', 'Ev', 'Iv',
         'aF', 'eF', 'iF', 'aV', 'eV', 'iV',
     ];
 
-    //μπ difthong case, inner word 'μπ' converted to 'mp', 'μπ' at word boundaries with 'b'
-    protected static array $el_mp_difthong = [
+    // 'μπ' digraph case, inner word 'μπ' converted to 'mp', 'μπ' at word boundaries with 'b'
+    protected static array $el_mp_digraph = [
         '\\Bμπ\\B', '\\BΜΠ\\B', '\\BΜπ\\B', '\\BμΠ\\B',
         'μπ|μΠ', 'ΜΠ|Μπ',
     ];
-    protected static array $lat_mp_difthong = [
+    protected static array $lat_mp_digraph = [
         'mp', 'MP', 'Mp', 'mP',
         'b', 'B',
     ];
 
-    //one fthong letters convertions
+    // single letter conversions
     protected static array $el_letters = [
         'α|ά', 'β', 'γ', 'δ', 'ε|έ', 'ζ', 'η|ή|ι|ί|ϊ|ΐ', 'κ', 'λ', 'μ', 'ν', 'ξ', 'ο|ό|ω|ώ', 'π', 'ρ', 'σ|ς', 'τ',
         'υ|ύ|ϋ|ΰ', 'φ',
@@ -77,10 +77,10 @@ class Transliterator
 
     public static function convert(string $str): string
     {
-        //do regex replacements, starting from difthongs, 1-fthong letters at the end
-        $str = self::replace_letters(self::$el_difthongs, self::$lat_difthongs, $str) ;
-        $str = self::replace_letters(self::$el_mp_difthong, self::$lat_mp_difthong, $str) ;
-        $str = self::replace_letters(self::$el_spec_difthongs, self::$lat_spec_difthongs, $str) ;
+        //do regex replacements, starting from digraphs, single letters at the end
+        $str = self::replace_letters(self::$el_digraphs, self::$lat_digraphs, $str) ;
+        $str = self::replace_letters(self::$el_mp_digraph, self::$lat_mp_digraph, $str) ;
+        $str = self::replace_letters(self::$el_spec_digraphs, self::$lat_spec_digraphs, $str) ;
         $str = self::replace_letters(self::$el_letters, self::$lat_letters, $str) ;
 
         return $str ;
