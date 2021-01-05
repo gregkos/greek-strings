@@ -54,6 +54,10 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
+- [Spatie](https://spatie.be) for the [package skeleton](https://github.com/spatie/package-skeleton-php)
+- [multipetros](https://github.com/multipetros) for the [inspiration and parts of the code](https://github.com/multipetros/ElStr.class.php)
+
+
 - [GregKos](https://github.com/gregkos)
 - [All Contributors](../../contributors)
 
