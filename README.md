@@ -5,7 +5,16 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/gregkos/greek-strings.svg?style=flat-square)](https://packagist.org/packages/gregkos/greek-strings)
 
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+A library to cover all your Greek string conversion needs.
+
+Currently:
+* Transliteration of Greek strings
+
+Planned:
+* Uppercase / lowercase conversions
+
+Wishlist:
+* Reverse transliteration
 
 ## Installation
 
@@ -18,8 +27,11 @@ composer require gregkos/greek-strings
 ## Usage
 
 ```php
-$skeleton = new GregKos\GreekStrings();
-echo $skeleton->echoPhrase('Hello, GregKos!');
+$greek_string = new GregKos\GreekString('Καλημέρα!');
+
+echo $greek_string->transliterate();
+
+// Kalimera!
 ```
 
 ## Testing
