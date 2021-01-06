@@ -35,6 +35,7 @@ class TransliterationTest extends TestCase
     public function transliterationExamplesProvider(): array
     {
         return [
+            ['', ''],
             ['αρχικό', 'archiko'],
             ['διεκπαιρέωση', 'diekpaireosi'],
             ['κεφαλαιοποίηση', 'kefalaiopoiisi'],
