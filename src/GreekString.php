@@ -27,4 +27,14 @@ class GreekString
     {
         return Transliterator::convert($this->string);
     }
+
+    public function toUpper(): string
+    {
+        return CaseConverter::convert($this->string, 'upper');
+    }
+
+    public function toLower(): string
+    {
+        return CaseConverter::convert($this->string, 'lower');
+    }
 }
