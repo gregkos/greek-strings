@@ -12,9 +12,7 @@ Currently:
 * Uppercase / lowercase conversions
 
 Planned:
-* camelCase conversion
-* snake_case conversion
-* kebab-case conversion
+* Open to feature requests! :)
 
 Wishlist:
 * Reverse transliteration
