@@ -9,7 +9,7 @@ class CaseConverter
     private static array $lower_accent_letters = ['ά', 'έ', 'ή', 'ί|ϊ', 'ό', 'ύ|ϋ', 'ώ'];
     private static array $lower_no_accent_letters = ['α', 'ε', 'η', 'ι', 'ο', 'υ', 'ω'];
 
-    public static function convert(string $str, string $target = null): string
+    public static function convert(string $str, string $target = null, bool $removeAccent = true): string
     {
         if ($target === 'upper') {
             $str = mb_strtoupper($str, 'UTF-8');
@@ -19,7 +19,9 @@ class CaseConverter
             $str = mb_strtolower($str, 'UTF-8');
         }
 
-        $str = self::removeAccent($str);
+        if ($removeAccent) {
+            $str = self::removeAccent($str);
+        }
 
         return $str;
     }

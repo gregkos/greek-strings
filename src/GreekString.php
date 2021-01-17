@@ -28,13 +28,13 @@ class GreekString
         return Transliterator::convert($this->string);
     }
 
-    public function toUpper(): string
+    public function toUpper($removeAccent = true): string
     {
-        return CaseConverter::convert($this->string, 'upper');
+        return CaseConverter::convert($this->string, 'upper', $removeAccent);
     }
 
-    public function toLower(): string
+    public function toLower($removeAccent = true): string
     {
-        return CaseConverter::convert($this->string, 'lower');
+        return CaseConverter::convert($this->string, 'lower', $removeAccent);
     }
 }

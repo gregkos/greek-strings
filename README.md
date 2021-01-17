@@ -9,12 +9,16 @@ A library to cover all your Greek string conversion needs.
 
 Currently:
 * Transliteration of Greek strings
+* Uppercase / lowercase conversions
 
 Planned:
-* Uppercase / lowercase conversions
+* camelCase conversion
+* snake_case conversion
+* kebab-case conversion
 
 Wishlist:
 * Reverse transliteration
+* Accent guesstimates
 
 ## Installation
 
@@ -26,12 +30,78 @@ composer require gregkos/greek-strings
 
 ## Usage
 
+You can create a new string by calling the constructor:
+
 ```php
 $greek_string = new GregKos\GreekString('Καλημέρα!');
+```
 
+You can transliterate any greek letters in the string like so:
+
+```php
 echo $greek_string->transliterate();
 
 // Kalimera!
+```
+
+You can convert the string to `UPPERCASE`...
+
+```php
+echo $greek_string->toUpper();
+
+// ΚΑΛΗΜΕΡΑ!
+```
+
+...or convert it to `lowercase`
+
+```php
+echo $greek_string->toLower();
+
+// καλημερα!
+```
+
+Keep in mind that conversions remove the accent unless you explicitly pass a parameter:
+
+```php
+echo $greek_string->toUpper(false);
+
+// ΚΑΛΗΜΈΡΑ!
+```
+
+However, there is no efficient way to add an accent that was not there before:
+
+```php
+$greek_string = new GregKos\GreekString('ΚΑΛΗΜΕΡΑ!');
+
+echo $greek_string->toLower();
+
+// καλημερα!
+```
+
+## Method Reference
+
+The following methods are available on any GreekString instance:
+
+```php
+// Returns the string as is
+getString(): string
+
+// Set a new string for the instance
+// $str = a valid string
+setString(string $str): self
+
+// Return a transliterated version of the string
+transliterate(): string
+
+// Return an uppercase version of the string
+// $removeAccent = a bool to determine whether or not
+// to remove accent from the string (default: true)
+toUpper($removeAccent = true): string
+
+// Return an lowercase version of the string
+// $removeAccent = a bool to determine whether or not
+// to remove accent from the string (default: true)
+toLower($removeAccent = true): string
 ```
 
 ## Testing
